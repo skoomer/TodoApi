@@ -11,10 +11,10 @@ module Api
         command = AuthenticateUser.call(params[:username], params[:password])
 
         if @user = User.find_by(username: params[:username])
-          # binding.pry 
+          # binding.pry
           command = nil
           session.clear
-      
+
           render json: { message: 'You are successfully logout!' }
           # head(:ok)
         else
@@ -43,7 +43,6 @@ module Api
       end
 
       def authenticate(params)
-
         command = AuthenticateUser.call(params[:username], params[:password])
 
         if command.success?

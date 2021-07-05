@@ -11,12 +11,12 @@ class ApplicationController < ActionController::API
 
   def authenticate
     current_user, decoded_token = Jwt::Authenticator.call(
-       headers: request.headers,
-       access_token: params[:access_token] # authenticate from header OR params
-     )
+      headers: request.headers,
+      access_token: params[:access_token] # authenticate from header OR params
+    )
 
-     @current_user = current_user
-     @decoded_token = decoded_token
+    @current_user = current_user
+    @decoded_token = decoded_token
   end
 
   def authenticate_request

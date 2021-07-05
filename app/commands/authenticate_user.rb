@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticateUser
   prepend SimpleCommand
   attr_accessor :username, :password
@@ -15,7 +17,7 @@ class AuthenticateUser
 
   def user
     user = User.find_by_username(username)
-    return user if user && user.authenticate(password)
+    return user if user&.authenticate(password)
 
     errors.add :user, 'Incorrect login or(and) password'
   end

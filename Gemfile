@@ -12,45 +12,38 @@ gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
+gem 'jbuilder', '~> 2.11.2'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'aws-sdk-s3', require: false
-gem 'bcrypt'
+gem 'bcrypt', '~> 3.1.16'
 gem 'cancancan', '~> 3.2.1'
 gem 'circleci', require: false
+gem 'circleci', require: false
 gem 'ffaker', '~> 2.18.0', require: false
-
 gem 'mimemagic', '~> 0.4.3'
 gem 'mini_magick', '~> 4.11.0'
-gem 'rack-cors', require: 'rack/cors'
+gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'rectify', '~> 0.13.0'
 
-gem 'dry-validation'
-
-gem 'wicked'
 # Reduces boot times through caching; required in config/boot.rb
-gem 'active_model_serializers'
-gem 'apipie-rails'
+gem 'active_model_serializers', '~> 0.10.12'
+gem 'apipie-rails', '~> 0.5.18'
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'jsonapi-rails'
-gem 'simple_command'
+gem 'jsonapi-rails', '~> 0.4.0'
+gem 'simple_command', '~> 0.1.0'
 # image uploader
+gem 'acts_as_list', '~> 0.9.10'
 gem 'carrierwave', '~> 2.0'
-gem 'carrierwave-base64'
-
-gem 'acts_as_list'
-
-gem 'fast_jsonapi'
-gem 'jwt'
-gem 'pundit'
-gem 'rswag-api'
-gem 'rswag-ui'
+gem 'carrierwave-base64', '~> 2.10.0'
+gem 'fast_jsonapi', '~> 1.5'
+gem 'ffaker', '~> 2.18.0', require: false
+gem 'jwt', '~> 2.2.3'
+gem 'pundit', '~> 2.1.0'
+gem 'rswag-api', '~> 2.4.0'
+gem 'rswag-ui', '~> 2.4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -59,9 +52,9 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.1.0'
   gem 'pry-rails', '~> 0.3.9'
   gem 'rspec-rails', '~> 5.0.0'
-  gem 'rswag'
+  gem 'rswag', '~> 2.4.0'
   gem 'rubocop', '~> 1.12', require: false
-  gem 'rubocop-graphql'
+  gem 'rubocop-graphql', '~> 0.9.0'
   gem 'rubocop-performance', '~> 1.10.2', require: false
   gem 'rubocop-rails', '~> 2.9.1', require: false
   gem 'rubocop-rspec', '~> 2.2.0', require: false
@@ -74,7 +67,9 @@ group :development do
 end
 
 group :test do
-  gem 'json_matchers'
+  gem 'json_matchers', '~> 0.11.1'
+  gem 'rails-controller-testing', '~> 1.0.5'
+  gem 'shoulda-matchers', '~> 4.0'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'simplecov', '~> 0.21.2', require: false
 end

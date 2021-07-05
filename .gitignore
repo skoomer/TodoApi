@@ -22,6 +22,18 @@
 /storage/*
 !/storage/.keep
 .byebug_history
-
+/public/assets
+/public/packs
+/public/uploads
+/public/packs-test
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/node_modules/
+.rspec_status
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+/.vscode/
+*.gem
+*.rbc
+*.key
